@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `NcountryDB`.`patients` (
   `id` INT NOT NULL,
   `insurance_name` VARCHAR(45) NULL,
   `insurance_number` VARCHAR(45) NULL,
-  `medical history` VARCHAR(245) NULL,
+  `medical_history` VARCHAR(245) NULL,
   `name` VARCHAR(45) NULL,
   `surname` VARCHAR(45) NULL,
   `dni` INT NULL,
