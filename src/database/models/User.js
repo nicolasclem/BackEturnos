@@ -5,7 +5,7 @@ module.exports =(sequelize,dataTypes)=>{
         id:{
             type:dataTypes.INTEGER(11),
             primaryKey:true,
-            autoincrement :true
+            autoIncrement :true
         },
         email: {
             type: dataTypes.STRING(60),
@@ -43,24 +43,24 @@ module.exports =(sequelize,dataTypes)=>{
 
      const User= sequelize.define(alias,cols,config)
 
-    //  User.associate = function (models){
+     User.associate = function (models){
 
-    //     User.hasMany(models.Role,{
-    //         as:'roles',
-    //         foreignKey:'role_id'
-    //     })
+        User.belongsTo(models.Role,{
+            as:'roles',
+            foreignKey:'role_id'
+        })
 
-    //     User.hasMany(models.Office,{
-    //         as:'offices',
-    //         foreignKey:'offices_id'
-    //     })
+        User.belongsTo(models.Office,{
+            as:'offices',
+            foreignKey:'offices_id'
+        })
 
     //     User.belongsTo(models.Schedule,{
     //         as:'scheduless',
     //         foreignKey:'user_id'
     //     })
 
-    // }
+     }
 
     return User
 }

@@ -10,7 +10,8 @@ const cookies = require ('cookie-parser');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
-const userRoute = require('./routes/users')
+const userRoute = require('./routes/users');
+const { QueryTypes } = require('sequelize/types');
 
 
 app.use(cors())// politica de seguirdad
