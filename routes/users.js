@@ -6,7 +6,7 @@ const login = require('../Controller/loginController')
  //render de fomularios usuarios
 
  router.get('/users',controller.show)
- router.get('/login', login)
+ router.post('/login', login)
     
 
 
