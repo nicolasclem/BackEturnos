@@ -1,4 +1,4 @@
-module.exports()=(sequelize,dataTypes)=>{
+module.exports=(sequelize,dataTypes)=>{
     let alias='Status';
     let cols = {
         id:{
@@ -17,12 +17,12 @@ module.exports()=(sequelize,dataTypes)=>{
         const Status=sequelize.define(alias,cols,config);
 
 
-        Status.associate = function(models){
+        // Status.associate = function(models){
 
-            Status.belongsTo(models.Schedule,{
-                as:'schedules',
-                foreignKey:'status_id'
-            })
-        }
+        //     Status.belongsTo(models.Schedule,{
+        //         as:'schedules',
+        //         foreignKey:'status_id'
+        //     })
+        // }
         return Status  
 }

@@ -29,20 +29,20 @@ module.exports =(sequelize, dataTypes) =>{
 
     const Schedule =sequelize.define (alias,cols,config);
 
-    Schedule.associate= function (models){
+    // Schedule.associate= function (models){
 
-        Schedule.hasMany(models.Status,{
-            as:'status',
-            foreignKey:"status_id"
-        })
-        Schedule.hasMany(models.Patient,{
-            as:'patients',
-            foreignKey:"patient_id"
-        })
-        Schedule.hasMany(models.User,{
-            as:'users',
-            foreignKey:"user_id"
-        })
-    }
+    //     Schedule.hasMany(models.Status,{
+    //         as:'status',
+    //         foreignKey:"status_id"
+    //     })
+    //     Schedule.hasMany(models.Patient,{
+    //         as:'patients',
+    //         foreignKey:"patient_id"
+    //     })
+    //     // Schedule.hasMany(models.User,{
+    //     //     as:'users',
+    //     //     foreignKey:"user_id"
+    //     // })
+    // }
     return Schedule
 }

@@ -1,4 +1,4 @@
-module.exports()=(sequelize,dataTypes)=>{
+module.exports=(sequelize,dataTypes)=>{
     let alias='Office';
     let cols = {
         id:{
@@ -20,13 +20,13 @@ module.exports()=(sequelize,dataTypes)=>{
         const Office =sequelize.define(alias,cols,config);
 
 
-        Office.associate = function(models){
+        // Office.associate = function(models){
 
-            Office.belongsTo(models.User,{
-                as:'users',
-            foreignKey:'offices_id'
-            })
-        }
+        //     Office.belongsTo(models.User,{
+        //         as:'users',
+        //     foreignKey:'offices_id'
+        //     })
+        // }
         return Office
     }
 

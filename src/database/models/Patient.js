@@ -45,16 +45,16 @@ module.exports =(sequelize,dataTypes)=>{
 
     const Patient= sequelize.define(alias,cols,config)
 
-    Patient.associate = function (models){
+    // Patient.associate = function (models){
 
-        Patient.belongTO(models.Schedule,{
-            as:'schedules',
-            foreignKey:'patient_id'
-        })
+    //     Patient.belongsTo(models.Schedule,{
+    //         as:'schedules',
+    //         foreignKey:'patient_id'
+    //     })
 
       
 
-    }
+    // }
 
     return Patient
 }

@@ -41,26 +41,26 @@ module.exports =(sequelize,dataTypes)=>{
         timestamps:false
     }
 
-    const User= sequelize.define(alias,cols,config)
+     const User= sequelize.define(alias,cols,config)
 
-    User.associate = function (models){
+    //  User.associate = function (models){
 
-        User.hasMany(models.Role,{
-            as:'roles',
-            foreignKey:'role_id'
-        })
+    //     User.hasMany(models.Role,{
+    //         as:'roles',
+    //         foreignKey:'role_id'
+    //     })
 
-        User.hasMany(models.Office,{
-            as:'offices',
-            foreignKey:'offices_id'
-        })
+    //     User.hasMany(models.Office,{
+    //         as:'offices',
+    //         foreignKey:'offices_id'
+    //     })
 
-        User.belongsTo(models.Schedule,{
-            as:'scheduless',
-            foreignKey:'user_id'
-        })
+    //     User.belongsTo(models.Schedule,{
+    //         as:'scheduless',
+    //         foreignKey:'user_id'
+    //     })
 
-    }
+    // }
 
     return User
 }

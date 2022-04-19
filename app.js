@@ -10,7 +10,7 @@ const cookies = require ('cookie-parser');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
-
+const userRoute = require('./routes/users')
 
 
 app.use(cors())// politica de seguirdad
@@ -32,9 +32,9 @@ app.use(express.urlencoded({extended:false}))
 
 app.use(cookies());
 
-// middle de aplicacion
 
 
+app.use('/',userRoute);
 
 
 
