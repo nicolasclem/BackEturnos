@@ -1,9 +1,9 @@
 module.exports={
   "development": {
-    "username": "root",
-    "password": '',
-    "database": "NcountryDB",
-    "host": "127.0.0.1",
+    "username": "ut5idpza7xiszu24",
+    "password": 'XVyaeFoDmCrG9DarlGKM',
+    "database": "blpdwxtp442w6xc5vlwd",
+    "host": "blpdwxtp442w6xc5vlwd-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "test": {

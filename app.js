@@ -34,7 +34,7 @@ app.use(cookies());
 
 
 
-app.use('/',userRoute);
+app.use('/api', userRoute);
 
 
 
